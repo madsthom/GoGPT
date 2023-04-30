@@ -8,8 +8,8 @@ import (
 	"os"
 )
 
-func runAgent(prompt promts.PromptTemplate, input []string) {
-	chatMsg := prompt.format(input)
+func RunAgent(prompt promts.PromptTemplate, input []string) {
+	chatMsg := prompt.Format(input)
 	resp, err := predict(chatMsg)
 	if err {
 		println(err)
