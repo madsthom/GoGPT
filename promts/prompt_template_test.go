@@ -1,4 +1,4 @@
-package main
+package promts
 
 import (
 	"github.com/stretchr/testify/assert"

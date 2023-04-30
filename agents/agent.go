@@ -1,13 +1,14 @@
-package main
+package agents
 
 import (
+	"GoGPT/promts"
 	"context"
 	"fmt"
 	"github.com/sashabaranov/go-openai"
 	"os"
 )
 
-func runAgent(prompt PromptTemplate, input []string) {
+func runAgent(prompt promts.PromptTemplate, input []string) {
 	chatMsg := prompt.format(input)
 	resp, err := predict(chatMsg)
 	if err {
